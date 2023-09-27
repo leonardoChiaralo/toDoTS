@@ -19,8 +19,6 @@ function cancelTask() {
 
   if (addContainer.style.display == "block") {
     addContainer.style.display = "none";
-  } else {
-    addContainer.style.display = "block";
   }
 }
 
@@ -53,6 +51,10 @@ async function saveTask() {
 
       button.textContent = "X";
       task.appendChild(button);
+
+      if (addContainer.style.display == "block") {
+        addContainer.style.display = "none";
+      }
     });
   } catch (error) {
     console.error(error);
